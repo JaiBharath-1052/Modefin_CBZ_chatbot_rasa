@@ -1,0 +1,1343 @@
+version: "2.0" # "3.0"
+
+nlu:
+- intent: balance
+  examples: |
+    - How can I check balance?
+    - Please check my Account Balance
+    - How to check my Account Balance?
+    - Display my account balance
+    - How do i make Balance Enquiry?
+    - My Account balance
+    - How can I check Account Balance?
+    - How do I make Balance enquiry request?
+    - How can I find out my Account Balance?
+    - Share account balance details
+    - Acc bal
+    - how to check my account balance
+    - show me the steps to check acc balance
+    - What is my account balance?
+- intent: billpayment
+  examples: |
+    - Please tell me how can i pay my bill
+    - can you show me how to pay a bill
+    - How can I pay a bill ?
+    - Share the details of bill payment
+    - I want to see payment of bills
+    - I would like to see bill payment
+    - Steps involved to download Proof of Payment for [FT-own](any)
+- intent: cardless_query1
+  examples: |
+    - I need to check cardless withdrawal service be used for other instead of own
+    - i want to see cardless withdrawal service be used for other instead of own
+    - Can Cardless Withdrawal service be used for Other instead of Own
+- intent: chequebook
+  examples: |
+    - I would like to see my Cheque book
+    - Please tell me where can i apply for Cheque book
+    - How can I apply for Cheque Book?
+    - What i need to do to collect chequebook?
+    - Where to find chequebook?
+    - Can i get chequebook
+    - Share chequebook details
+    
+- intent: covid_19
+  examples: |
+    - How can i help for covid-19 fund
+    - Can i add fund for covid19
+    - How do I support for covid-19 fund?
+    - i want to support for covid19
+    - how to fund covid19
+    - i want to give covid19 fund
+    - support for covid19 fund
+    - help me in funding covid9
+- intent: costumer_care
+  examples: |
+    - Please show me costumer care details
+    - Can i see costumer care information
+    - Customer service center
+    - How to reach the help desk?
+    - How do I contact Bank Customer Care?
+- intent: electricity_pymt
+  examples: |
+    - I would like to pay my electricity bill
+    - Can you show me how to pay my Electicity Bill
+    - please let us know about Electricity bill
+    - How to pay Electricity Bill
+    - Show Electricity Bill
+    - Extract electricity bill
+- intent: feedback
+  examples: |
+    - I need the Feedback
+    - Can you provide Feedback
+    - How do I share Feedback
+    - How do I send Feedback?
+    - Show feedback details
+    - I would like to know feedback info
+- intent: fullstmt
+  examples: |
+    - Please show my bank full statement
+    - Show me all my transaction details
+    - Make Full stmt
+    - how to check full statement
+    - show me the full statement of my account
+    - I would like to see my Full statement
+    - How can I check Full Statement relating to my account?
+    - Display Full Statement
+    - Give me a list of my full statement history
+    - Extract Statements
+    - Please extract full statement of my movement
+    - Account transactions overview
+- intent: ministmt
+  examples: |
+    - Can I view the transactions relating to my account?
+    - My recent spends
+    - latest transactions
+    - recent transactions
+    - last transactions
+    - ministatement of my account
+    - my acc mini statement
+    - i want to check my ministatement
+    - Please show my mini stmt
+    - I would like to see ministatement
+    - Display Mini statement
+    - How can I check Mini Statement relating to my account?
+    - Please retieve my Mini Statement
+- intent: proof_of_payment
+  examples: |
+    - How to check Proof of Payment
+    - Find out proof of payment
+    - I want to see proof of payment
+    - what is proof of Payment?
+    - Give me the proof of payment
+    - Share proof of payment
+    - Extract proof of payment
+    - where to see proof of payment
+- intent: recharge
+  examples: |
+    - I would like to recharge my mobile
+    - Show recharge details
+    - how do i do mobile recharge
+    - steps to make mobile recharge
+    - Extract Recharge information
+    - Please tell me how to do recharge in mobile
+    - Topup details from mobile
+    - How can I do a mobile Recharge
+- intent: trfr_types
+  examples: |
+    - FT types
+    - I would like to know the types of FT
+    - In Mobile banking service, How many types of fund transfer are there.
+    - What kind of Funds Transfer can I do in mobile banking service?
+    - What are the types of fund transfer
+    - I want to know details of transfering the funds
+    - Extract the detail information of fund transfer
+- intent: welcome
+  examples: |
+    - hi
+    - HI
+    - Hii
+    - HII
+    - hiya
+    - hello hi
+    - howdy
+    - greetings
+    - hey
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: greet
+  examples: |
+    - helo hello
+    - hii how are you
+    - Hi good morning
+    - Hey gd m
+    - HeyHello
+#- intent: bot_challenge
+  #examples: |
+    #- are you a bot?
+    #- are you a human?
+    #- am I talking to a bot?
+    #- am I talking to a human?
+
+- intent: cardless
+  examples: |
+    - Steps for cardless withdrawal
+    - How to withdraw the funds without card
+    - how can i make cardless wirhdrawl
+    - cardless withdrawl
+    - process to cardless withdraw
+    - Card less withdrawal at [ATM](location)
+    - What is the detailed process of using Cardless Withdrawal service using [ATM](location)?
+    - Card less withdrawal at [Agent](location)
+    - What is the detailed process of using Cardless Withdrawal service using [Agent](location)?
+- intent: forex_rates
+  examples: |
+    - Show forex rates
+    - How to check forex rates
+    - [USD](currency-name) to [KES](currency-name1)
+    - [USD](currency-name) to [KES](currency-name1) today
+    - Share Forex Rates
+    - Can you show forez ratez
+    - Todays [USD](currency-name) to [KES](currency-name1)
+    - How to extract forex info
+    - Check for Forex information
+    - Whats todays forex rates [USD](currency-name) to [KES](currency-name1)
+    - Check forex rates
+    - How can I check Forex Rates?
+- intent: fund_trfr
+  examples: |
+    - I would like to transfer my funds
+    - How Can I transfer funds to [International](any) Account
+    - How Can I transfer funds to [Other Bank](any) Account
+    - How Can I transfer funds to [Same Bank](any) Account
+    - How Can I transfer funds to [Own](any) Account
+- intent: location
+  examples: |
+    - find [Branch](location)
+    - How do I find [Agent](location) near by
+    - How do I find [Agent](location) near me
+    - How to get the directions from Current Location to desired [ATM](location) location
+    - How to find an [ATM](location)  in a certain area
+    - How do I find [Branch](location)
+- intent: pop_steps
+  examples: |
+    - Generate proof of payAment for [School fees](any)
+    - get POP for [Bill payment](any)
+    - get me proof of payments for [university fee](any)
+- intent: stmt_duration
+  examples: |
+    - download statement for [1 year](duration)
+    - statement for [2 year](duration)
+    - how to download statement for [3 months](duration)
+    - [1 year](duration) statement download
+- intent: international_transfer
+  examples: |
+    - can you help me in international transfer
+    - how i can transfer international
+    - steps to do international transfer
+    - I want to do an international transfer
+    - Can I do an international transfer
+- intent: jokes
+  examples: |
+    - jokes please
+    - more jokes
+    - lough me
+    - joke please
+    - joke
+- intent: thanks
+  examples: |
+    - thank
+    - thank you
+    - thank you!
+    - Thank you so much
+- intent: change_password
+  examples: |
+    - How do I change my password?
+    - What should I do to change password?
+    - Where can I change my password?
+    - Help me in changing the password
+    - guide me in changing the password
+    - how to change the password
+    - change my password
+    - can you help me in changing my password
+- intent: register_for_autopay
+  examples: |
+    - How to register for Autopay?
+    - help me in registering for autopay
+    - register for auto pay
+    - autopay registration
+    - auto pay register
+    - register for auto payment
+    - help me to register auto pay
+    - how to do autpay registration
+    - autopay register
+- intent: loan_products
+  examples: |
+    - what loan products do you have?
+    - what are the loan plans
+    - which type of loan produts do you have?
+    - tell me loan products
+    - avalable loan products
+    - loan prod
+    - loan pro
+    - available loan plans
+    - what are the diff types of loans do you have
+    - what are the loans plan
+    - available loan plans?
+    - show mw available loan plans
+    - what are the available loan products
+    - loan products
+    - what are the loan plans
+    - which type of loan produts do you have?
+    - Tell me loan products
+    - avalable loan products
+    - What are the available loan products
+    - Loan products
+
+- intent: personal_loan
+  examples: |
+    - personal loan
+    - i want personal loan
+    - need personal loan
+    - looking for personal loan
+    - i need personal loan
+    - required personal loan
+    - personal loans
+    - i need a personal loan
+- intent: home_loan
+  examples: |
+    - home loan
+    - i am looking for home loan
+    - need home loan
+    - looking for home loan
+    - required home loan
+    - need home loan now
+    - i want home loan
+    - looking home loan
+- intent: business_loan
+  examples: |
+    - business loan
+    - need business loan
+    - looking for business loan
+    - i want business loan
+    - require business loan
+    - bussiness loans
+- intent: vacation_loan
+  examples: |
+    - vacation loan
+    - vacation loans
+    - need vacation loans
+    - looking for vaccation loan
+    - i want vacation loan
+    - require vacation loan
+- intent: deny_loan
+  examples: |
+    - no
+    - noo
+    - not this moment
+    - some other time
+    - no thanks!
+    - nohhh
+    - NO
+    - Nope
+    - NO thanks
+- intent: confirm_loan
+  examples: |
+    - yes
+    - yes am intrested
+    - yes i need
+    - yes its an emergency
+    - yes please process it as soon as posible
+    - yes intrested
+    - yes please
+    - YES
+- intent: register_for_autopay
+  examples: |
+    - How to register for Autopay?
+    - help me in registering for autopay
+    - register for auto pay
+    - autopay registration
+    - auto pay register
+    - help me in autopay registration
+    - how to complete auto registration
+    - steps for autopay register
+    - register for auto payment
+    - help me to register auto pay
+
+- intent: register_mobile_banking
+  examples: |
+    - how do i register for mobile banking?
+    - how do i reg for mobile banking
+    - how can i reggister for mobilr banking
+    - how do i register for mobile banking service
+    - mobile banking reg steps
+    - steps to register mobilebanking
+    - register for mobile banking
+    - how to to do mobile banking registration
+    - steps to register for mobile banking
+    - can you help me in mobile banking registration
+    - how to register mobile banking
+    - register mobile banking
+    - mobile bank register
+    - mobile banking registration
+    - register for online mobile banking
+    - mob banking registration
+    - how to signup on mobile banking
+    - how to create mobile banking
+    - how to register for banking on mobile
+    - how to apply for mobile bank registeration
+    - how do i reg for mobile banking
+    - help me in mobile banking register
+- intent: manual_registration_for_invalid_details
+  examples: |
+    - I am getting an invalid details error code when trying to register for the service, what do l do?
+    - getting invalid credentials
+    - how to get valid details when trying to register for service 
+    - I am getting an invalid detail error code when trying to register for the service
+    - getting invalid details while register
+    - what to do, i am getting invalid details
+    - getting invalid details
+    - how can i validate the details while registering for service
+    - i am getting invalid details message when trying toregister for the service
+    - howing invalid details while registering for a service
+    - how to register for the service when i get invalid details
+    - how to register for service, when i get invalid details
+- intent: login_credentials_error
+  examples: |
+    - I did not receive Log in credentials after successfully registering.
+    - did not receive Log in credentials after successfully registering.
+    - i didnt get login details after successfully register
+    - i didnt get logn credentials after registering
+    - what to do to get login credetials after successfull registration
+    - didnt get login credentials after registering
+- intent: ussd_code
+  examples: |
+    - What is the USSD Code?
+    - ussd code
+    - ussd code means
+    - ussd stands
+    - what means ussd
+    - what does ussd
+    - ussd code means
+    - USSD code
+    - ussdcode means
+    - what is ussd
+    - what does ussd
+- intent: reset_mobile_banking_mpin
+  examples: |
+    - How do l reset my Mobile Banking m-pin?
+    - how to reset my mobile banking mpin
+    - how to reset mobile bank mpin
+    - how to set new m-pin for my mobile banking
+    - set new m-pin to my mobile banking
+    - set mobile bank new m-pin
+    - how do i set my mobile bank m-pin
+    - reset my mobile banking mpin
+    - reset mpin
+    - how do i resets mobile banking mpin
+    - how can i reset my MB M-PIN
+    - reset my mobile banking M pin
+    - retset my MB mpin
+    - reset my m-pin
+    - how to do m-pin reset
+    - how do i reset mobile bank mpin
+    - how i can reset m-pin for mobile banking
+    - steps to reset the mobile bank m-pin 
+    - reset m-pin
+    - reset mobile password
+    - how to reset mobile banking mpin
+    - mpin reset for my mobile banking
+    - help me in reseting mobile banking mpin
+- intent: where_to_get_reset_form
+  examples: |
+    - where do i get the reset form?
+    - where i can get the reset form
+    - how to get reset form
+    - what to do to get reset form
+    - can i get reset form
+    - how i can get reset form
+    - get reset form
+    - where can i get reset form
+    - how do i get the reset form
+    - reset form
+    - where i can get the form for reset
+- intent: how_to_change_details_on_mobile_banking
+  examples: |
+    - How do I change details (email address/mobile number) appearing on my mobile banking?
+    - how to change details appearing on my mobile banking?
+    - how do i change my details on mobile banking
+    - how to change mobile banking details
+    - change details appearing on my mobile banking
+    - help me in changing details on my mobile banking
+    - what do i do to change details on my mobile banking
+    - change details on my mobile bank
+    - details change on my mobile banking 
+    - mobile bank account details change
+    - change details appearing on mobile banking?
+    - change my address details appearing my mobile banking
+    - how do i change address details appering on my mobile banking
+    - how do i update address details appearing on my mobile banking
+    - how to update email on mobile banking
+    - how can i change address on my mobile banking
+    - how do i change of address on my mobile banking
+    - change details of email on mobile banking
+    - how to update my details on my mobile bank
+    - how to change email ID on my mobile banking
+    - how to chang mobile number on mobile banking
+    - how to change number change on my mobile banking
+    - how to change my mobile number on my mobile banking
+    - how to update email address and mobile number on my mobile banking
+    - how can i  change my mobile number on my mobile banking 
+    - change the account details on my mobile bank
+    - change email address and mobile number details appearing on my mobile banking  
+
+- intent: required_docs_for_prepaid_visa_gold_card
+  examples: |
+    - What documents are required for me to get the prepaid Visa Gold Card?
+    - required documents to get prepaid visa gold card
+    - what are the documents needed to get the prepaid visa gold card
+    - list of docs to get prepaid visa gold card
+    - required docs for prepaid visa gold card
+    - what docs are needed to get a prepaid visa gold card
+    - required docs for prepaid visa gold card
+    - needed documents for prepaid visa gold card
+    - what are the list of documents to get prepaid visa gold card
+    - visa gold card required documents for apply
+    - am i a prepaid visa gold card customer? if not how to apply and what are the documents needed
+    - what documents needed for applying gold card of visa
+    - documents required for prepaid visa card
+    - docs for prepaid visa card
+    - what papers are required to apply for visa gold card
+    - docs for prepaid visa gold card application
+    - what are the documents required for visa gold card to submit
+    - which doc needed to apply for visa gold card
+    - process to apply visa gold card and what docs needed
+    - papers required to apply for visa gold card
+    - required papers to apply visa gold card
+    - visa gold card required documents
+    - documents to apply for prepaid visa gold card
+    - what documents needed to apply for prepaid visa gold card
+    - docs for visa gold card
+    - certificates required for getting prepaid visa gold card
+    - what documents require for getting prepaid visa gold card
+    - what documents i nedded for getting visa card
+    - which are the documents required for getting the prepaid visa gold card
+    - documents for prepaid visa card
+    - required certificates for getting prepaid visa gold card
+- intent: visa_card_cost
+  examples: |
+    - how much does the visa gold card card cost?
+    - cost of visa card
+    - visa gold card cost
+    - cost of visa card account
+    - amount for a visa new gold card
+    - new visa gold card cost
+    - cost of new visa gold card
+    - how much is the prepaid visa gold card
+    - what is the cost of visa card
+    - cost of visa gold card
+    - price of visa gold card
+    - amount for a new visa gold card
+    - cost of new visa gold card?
+    - how much cost for visa gold card
+    - amount of visa gold card
+    - how much is visa gold card cost
+    - visa gold card cost
+    - cost of new visa gold card cost
+    - how much does the new visa gold card cost
+    - joining fee on visa gold card
+    - fees on prepaid visa gold card
+    - charges on prepaid visa gold card joining
+    - joining fee charges on prepaid visa gold card
+    - joining fee cost on prepaid visa gold card
+    - how much is the visa card cost
+    - cost of new visa gold card
+    - joining charges on prepaid visa gold card
+- intent: min_bal_for_visa_gold_card_account
+  examples: |
+    - What is the minimum balance for the Visa Gold Card account?
+    - What is the minimum balance for the Visa Gold Card account
+    - minmum balance for the visa card
+    - min bal for the visa gold card account
+    - min balance for visa gold card acc
+    - what is the min bal for visa gold card account
+    - visa gold card account min balance?
+    - standard minimum balance for visa gold card account
+    - goldcard account minimum balance
+    - what are the minimum amount on vias card account
+    - how much minimum amount needed for visa gold card
+    - min balance for visa gold card
+    - visa gold card minimum balance
+    - What is the minimum balance for visa account
+    - minimum balance for visa gold card acc
+    - min balance for visa gold card account
+    - visa gold card account minimum balance
+    - visa gold card acc min bal
+    - how much is the minimum balance for the visagold card account?
+    - minimum amount for visa gold card account
+    - what is the minimum amount for visa gold card account
+    - minimum amount for visa gold card acc
+    - visa gold card account min balance
+    - what are the minimum balance for visa goldcard account
+- intent: where_to_use_visa_gold_card
+  examples: |
+    - Where can visa card can be used?
+    - whare i can use visa gold card
+    - where used this visa gold card
+    - can i use visa gold card in online
+    - where can be use visa gold card
+    - where to use visa gold card
+    - where can visa goldcard used
+    - where to use VISA
+    - where can visa gold card use
+    - where can i spend visa gold card
+    - can i spend visa gold card anywhere
+    - can i spend anywhere the visa gold card
+    - where i can usage visa gold card
+    - where the visa gold card usibility
+    - where i can used VISA visa card
+    - where to be used the VISA
+    - can i use visa goldcard anywhere
+    - can i use visa gold card anywhere
+    - am i eligible to use visa gold card
+    - where i can use visa gold card
+    - can i use visa gold card for shoping in online
+- intent: monthly_charges_for_visa_gold_card
+  examples: |
+    - What are the charges on the Visa Gold Card?
+    - charges on visa gold card
+    - visa gold card charges
+    - fee for visa gold card
+    - how much is charged for visa gold card
+    - visa gold card monthly charges
+    - how much are the visa gold card monthly charges
+    - monthly visa gold card charges
+    - visa gold card charge
+    - what charges applicable for gold card
+    - what are the fees for gold card
+    - visa gold card  fee charges
+    - what charges applicable on visa gold card
+    - how much charges applicable on visa gold card
+    - fees on cards of visa
+    - fee amount on visa gold card
+    - monthly visa card charges
+    - charges on visa gold card for a month
+    - monthly service charge on visa gold card
+    - visa gold card monthly service charge
+    - service charges on visa gold card for month
+    - service fee on visa gold card for a month
+    - monthly service fee on visa gold card
+    - any fees for visa gold card
+    - fees for visa gold card
+    - how much fees on visa gold card
+    - how much charges apply for visa gold card
+- intent: card_link_to_paypal
+  examples: |
+    - Can l link my card to PayPal?
+    - can i link my visa card to paypal
+    - link my card to paypal
+    - can i use my visa card account in paypal
+    - can link my visa card account in paypal
+    - can i use my card in paypal
+    - ca we link visa card to paypal account
+    - link my card to paypal acc
+    - can we link visa gold to paytpal process
+    - can i use visa gold card to link on paypal
+    -  visa gold card link to paypal
+    - can i linked the visa gold card with paypal
+    - prepaid visa card link to paypal
+    - can i link my visa gold card to paypal
+    - can my visa gold card link to paypal
+    - link my prepaid visa gold with paypal
+    - can i link prepaid visa gold to paypal
+- intent: when_visa_gold_card_will_activate
+  examples: |
+    - How long does it take to be activated the visa gold card?
+    - how much time it will take for visa gold card activation
+    - when visa  card will be activated
+    - visa gold card activation timings
+    - visa card activation time
+    - how much time will take to activate visa gold card
+    - time take to activate the visa gold card
+    - visa gold card activation time
+    - visa gold card activation duration
+    - visa gold card account activating time 
+    - visa card activation timings
+    - visa gold card activation timing
+    - VISA card activation time
+    - visa gold card activation duration timings
+    - how much time will take to activate the visa gold card
+    - when my visa gold card will activate
+    - how much time it will take to activate the visa gold card
+    - visa gold card activation duration
+    - how long time for visa gold card activation
+    - How long does it take to activate the visa gold card?
+- intent: receive_visa_gold_card_sms_alerts
+  examples: |
+    - Do we receive SMS alerts?
+    - do we receive email notifications on visa gold card account
+    - can i get the visa card statements on email
+    - can i get the visa card statements on SMS
+    - can i get the visa card statements as sms alerts
+    - get visa gold card account statement notifications
+    - get visa gold card account statements as sms alerts
+    - can we get sms alerts
+    - receive mobile notifications on visa card statements
+    - do we receive mobile notifivation alerts
+    - do we get sms alert?
+    - do we receive messages in my mobile
+    - do we receive mobile notification alerts on visa card acc statement
+    - email notification on visa gold card statements
+    - do i get sms alerts
+    - can i get sms notifications
+    - is it possible to get sms alerts
+    - get sms alerts
+    - can i receive statements alerts on mobile
+    - mobile notifications for visa gold card statement
+    - alerts sms on visa gold card
+    - sms notifications on visa card statements
+    - statement notification alerts on visa gold card
+    - can i get notifications on visa gold card statements
+    - can i receive visa card sttmnt alerts 
+    - do we received sms alerts?
+    - sms alerts?
+    - do we get sms notifications?
+- intent: visa_gold_card_transaction_limit
+  examples: |
+    - How much is the visa gold card limit per day and per transaction?
+    - How much is the limit per day and per transaction for visa gold card
+    - limit per day and per transaction in visa gold card
+    - what are the visa gold card limit per day and per transaction
+    - transactions limit per day in visa gold card acc
+    - how much is the limit perday and per transaction in my visa card account
+    - visa gold card account limit per day and per transaction
+    - visa card limit per day and per transaction
+    - can i do limitless transaction per day and per transaction on visa gold card account
+    - limitless transactions in visa gold card
+    - transaction limit on visa gold acc
+    - how much i can transfer per day and per transaction from visa card account
+    - do we have any limit on visa gold card account transactions
+    - what is the visa gold card  limit to transact per day
+    - transaction limit per day on visa card account
+    - do i have any restrictions on visa card transactions
+    - do i have any limit on visa gold card transaction
+    - can i have limitless transaction on visa gold card
+    - can i transact limitless transaction on visa gold card
+    - txn limit per day and per transaction on visa gold card account
+- intent: how_to_apply_visa_gold_card
+  examples: |
+    - How do i apply for visa gold card?
+    - how to apply visa gold card
+    - help me in applying visa gold card
+    - how to apply visa gold card
+    - how to get visa gold card
+    - how i can get visa gold card
+    - can you help me in applying visa gold card
+    - how can i apply visa gold card
+    - visa gold card apply
+    - process to apply visa gold card
+    - apply for visa gold card
+- intent: what_todo_when_lose_visa_gold_card
+  examples: |
+    - What do I do when I lose my Visa Gold Card, to theft or misplacement?
+    - What do I do when I lose my Visa Gold Card
+    - what todo when i lose my visa gold card
+    - help me when i lose my visa gold card
+    - i lose my visa gold card, what to do
+    - i lose my visa gold card
+    - i lost my visa gold card what do i do?
+    - what todo if someone has stolen my visa card
+    - what i can do if my visa gold card is stole
+    - what should i do if my visa gold has stolen
+    - my visa gold card is robbed what to do?
+    - what to do if my visa card has rob
+    - what tod do if my visa card is missing
+    - what should i do if i miss the visa gold card
+    - what should i do if my visa card hasbeen miss placed
+    - what to do if my visa card has gone missing
+    - visa gold card is misplaced or missed, theft,stolen, tole, steel, robbed
+    - i lose my visa gold card, to theft or misplacement
+    - what do i do when my visa gold card it theft
+    - what do i do if my visa gold card is miplacement?
+- intent: rtgs_transfer_charges
+  examples: |
+    - How much is an RTGS transfer?
+    - what are RTGS transfer?
+    - cost RTGS transfer?
+    - charges on RTGS transfer?
+    - charges for RTGS transfer?
+    - rtgs transaction charges
+    - rtgs charges for transactions
+    - transaction charges for rtgs
+    - transfer charges on real time gross transfer
+    - what are the real time gross transfer
+    - how much is an real time gross transfer?
+    - real time gross charges on transfer
+    - charges on real time gross
+- intent: time_take_to_reflect_amount_in_rtgs
+  examples: |
+    - How long does it take to reflect amount in rtgs?
+    - How long does it take to reflect amount in rtgs
+    - how long it take to reflect amount in rtgs
+    - time take to reflect amount in rtgs
+    - how long dows RTGS take to reflect?
+    - how long time it will take to reflect the amount in real time gross 
+    - RTGS time take to reflect the amount
+    - when would RTGS transaction reach the destination
+    - how much time it will take settle the amount in rtgs
+    - RTGS settlement time
+    - how long does the RTGS take to settle
+    - when would RTGS transaction reach the destination
+    - RTGS settlement time on transactions
+    - RTGS transaction settlement time
+    - time take to reflect the amount in RTGS
+    - when will be amount is reflect in rtgs
+    - how much time it will take to reflect the amount in rtgs
+    - time taken to reflect the amount in rtgs
+    - how much time does it take to reflect amount in rtgs
+    - time took to reflect the amount in rtgs
+    - how much time will take to reflect amount rtgs 
+    - how much time it will take to reflect amount in rtgs
+    - how much time it will take to reflect the amount in rtgs
+- intent: capture_wrong_destination_acc_details_rtgs_transfer
+  examples: |
+    - What do I do when I capture wrong destination account details on conducting RTGS transfer (wrong account number or account name)?
+    - what do i do when i capture wrong destination account details on conducting a RTGS transfer
+    - what to do, when i capture wrong account details on conducting rtgs transfer
+    - help me, when i capture wrong destination acc details on conducting rtgs transfer
+    - what do i do when i capture wrong details on conducting rtgs transfer
+    - can you help me when i capture wrong destination acc details on conducting rtgs transfer
+    - What can i do when I capture wrong destination account details on conducting a rtgs transfer
+    - i capture wrong destination acc details on conducting a rtgs transfer
+    - what to do when i capture wrong details on conducting rtgs transfer
+    
+
+    
+- intent: zipit_charges
+  examples: |
+    - how much is the zipit charge?
+    - charges on zipit
+    - amount for ZIPIT transfors
+    - what are the charges on ZIPT transaction
+    - transaction charges on ZIPIT
+    - what is the rate of charge on zipit
+    - charge rates on zipit
+    - ZIPIT charges
+    - could you tell zipit charge rates
+    - show me the zipit charges
+    - what are the zipit charges
+    - may i know zipit charges
+    - what could be the zipit charges
+    - what might me the zipit charges
+    - how much is the charge on zipit?
+    - how much the zipit charge
+    - zipit charges
+    - charges of zipit
+    - how much the zipit charges
+    - zipit chargs on transaction
+    - what are the charges on zipit
+- intent: zipit_reflect_time
+  examples: |
+    - How long does it take to reflects ZIPIT?
+    - time taken to reflect zipit transaction
+    - zipit How long does it take to reflect?
+    - zipit time to reflect the amount
+    - is instant reflect transafer in ZIPIT
+    - ZIPIT reflect time
+    - when will be the transaction amount reflect in RTGS
+    - is transaction reflect instant on RTGS 
+    - How long does it take for an RTGS reflection to occur?
+    - How long does it take for a reflect to happen in RTGS?
+    - how much time will take to reflect the amount in ZIPIT
+    - time to reflect the zipit
+    - How long does it take for RTGS to reflect?
+    - Takes how long to reflect in RTGS?
+    - when i can expect the the transaction occur in ZIPIT
+    - How long it take to reflect zipit?
+- intent: zipit_register
+  examples: |
+    - How do you register to use ZIPIT?
+    - how to register zipit
+    - register zipit
+    - How can one sign up to utilise ZIPIT?
+    - How can I sign up for ZIPIT?
+    - To use ZIPIT, how do you register?
+    - How do you sign up to use ZIPIT?
+    - How can one sign up to utilise ZIPIT?
+    - How can I sign up for ZIPIT?
+    - To use ZIPIT, how do you register?
+    - How can I sign up for ZIPIT?
+    - how to register for ZIPIT?
+    - help me in registering zipit
+    - guide me in registering zipit acc
+    - how to signup ZIPIT
+    - what to do to onboard ZIPIT
+    - ZIPIT signup process
+    - ZIPIT register process
+    - what steps are i need to follw to register ZIPIT 
+    - zipit acc register
+    - how to register zipit
+- intent: zipit_limit_per_day
+  examples: |
+    - How much is the limit per a day in zipit?
+    - transaction limit per day in zipit
+    - zipit transaction limit perday
+    - What is Zipit's daily cap in terms of value?
+    - The Zipit daily cap is what amount?
+    - How much is the limit per day on ZIPIT?
+    - How much is the ZIPIT daily cap?
+    - 3What is the daily ZIPIT limit?
+    - What is the ZIPIT daily limit?
+    - perday limit transaction in zipit
+    - zipit transaction limit per day
+    - How much is the zipit limit per day?
+    - what are the charges on zipit transaction per day
+    - perday transaction limit in zipit
+    - limit perday in zipit transaction
+    - transaction limit per day in zipit
+- intent: zipit_transaction_cost_to_recall
+  examples: |
+    - How much does it cost to recall a ZIPIT transaction?
+    - recall cost to zipit transaction
+    - cost of zipit transaction to recall
+    - recall cost in zipit transaction
+    - What is the price of recalling a ZIPIT transaction?
+    - How much does a ZIPIT transaction recall cost?
+    - What does it cost to cancel a ZIPIT transaction?
+    - How much does it cost to cancel a ZIPIT transaction?
+    - the price of recalling a ZIPIT transaction?
+    - a ZIPIT transaction be recalled for?
+    - Cost of reversing a ZIPIT transaction?
+    - How much does it cost to reverse a ZIPIT transaction?
+    - the price of recalling a ZIPIT transaction?
+    - How much does it cost to recall  ZIPIT transaction?
+    - cost to recall a ZIPIT transaction?
+    - what is cost to recall a ZIPIT transaction?
+    - cost to recall a ZIPIT transactios
+    - cost to recall a ZIPIT
+    - cost to recall ZIPIT
+    - what are the ZIPIT recall charges
+    - how much is the ZIPIT reverse charges
+    - what are the reverse zipit transaction charges
+    - can i cancel the zipzipit transaction or recall 
+    - How much ZIPIT can you have each day?
+    - cost to recall a ZIPIT transact
+- intent: capture_wrong_destination_acc_details_zipit_transfer
+  examples: |
+    - What do I do when I capture wrong destination account details on conducting a Zipit transfer (wrong account number or account name)?
+    - what do i do when i capture wrong destination account details on conducting a Zipit transfer
+    - what to do, when i capture wrong account details on conducting zipit transfer
+    - help me, when i capture wrong destination acc details on conducting zipit transfer
+    - what do i do when i capture wrong details on conducting zipit transfer
+    - can you help me when i capture wrong destination acc details on conducting zipit transfer
+    - What can i do when I capture wrong destination account details on conducting a Zipit transfer
+    - i capture wrong destination acc details on conducting a zipit transfer
+ 
+- intent: how_to_login_internet_bank
+  examples: |
+    - How do you login when on homepage?
+    - How do you login when on homepage to internet bank
+    - How do you login into internet banking
+    - login internet banking when on home page
+    - login from homepage into internet banking
+    - internet banking login
+    - how to login when on homepage into internet banking
+- intent: pop_corporate_user
+  examples: |
+    - How to get POP- Corporate user
+    - How to register as a POP-Corporate user
+    - How to become a corporate POP user
+    - How to sign up as a corporate POP user
+    - how to become a corporate user using POP
+    - How to get POP-Corporate user
+    - How to get POP Corporate user
+    - How to get POP user
+    - How to get POP- Corporate users
+    - get POP- Corporate user
+    - POP- Corporate user
+    - steps to get proof of payment corporate user
+    - how to retrive proof of payment corporate user
+    - how do i retrive pop corporate user
+     - how do i get past transactions 
+    - how to get proof of payment corporate user
+    - how to pop corporate user
+- intent: individual_user_bank_statement
+  examples: |
+    - How do you view bank statement individual user?
+    - How to you view bank statement individual user?
+    - view bank statement individual user?
+    - How do you view bank statement individual user
+    - How do you view bank statement individual users
+    - how to see individual bank user statement
+    - bank user statement individually
+    - how do gwt single user account statement
+    - how do i get bank user statement
+    - how do i get my bank acc statement
+    - how to get my bank statement
+    - how can i get my bank full statement
+    - how do i get my all bank ststements
+    - how do i get individual bank ststements
+    - how do i get individual bank transaction history
+    - how do i get monthly yearly sstatement
+    - how do i get my bank passbok statement
+    - How can you view a single user's bank statement?
+    - How do you view a user's bank statements 
+    - What is the individual user view of a bank statement?
+    - How do you view a user's bank statement?
+    - What does an individual user's bank statement look like?
+    - What is the individual user view of a bank statement?
+    - view bank statement of individual user
+- intent: internet_bank_password_change
+  examples: |
+    - How do l change my internet bank password?
+    - How do l change my internet bank passwords
+    - How l can change my internet bank password?
+    - help me in changing internet banking password
+    - how to change inetrnet banking password
+    - change internet banking password
+    - change password for internet banking
+    - how to change password on internet banking
+    - how to reset my internet banking password
+    - how do i recover internet bank password
+    - i for get my internet banking password, how i can change
+    - password change for internet banking
+    - how to change password for my internet bank
+    - how to reset internet bank password
+    - how to recover password for intente    
+    - internet banking password change steps
+    - steps to change internet banking password
+    - how to change password for my internet banking
+- intent: register_for_internet_bank
+  examples: |
+    - How do l register for OBDX internet banking?
+    - register OBDX internet banking
+    - how to register for obdx
+    - OBDX internet banking registration
+    - register OBDX internet bank account
+    - help me in OBDX internet bank registration
+    - how can i register for obdx internet bank
+    - internet banking OBDX registartion steps
+    - steps to register in obdx internet bank
+    - how to register for oracle banking digital experience
+- intent: change_details_on_internet_bank
+  examples: |
+    - How do I change details (email address/mobile number) appearing on my Internet Banking?
+    - how do i change details on internet banking
+    - how to change personal details on internet bank
+    - how do i change details appealing on my internet banking
+    - how do i change email on my internet banking
+    - help me in chnaging my mobile number on my internet banking
+    - can you help me in chnaging my address details on my internet banking
+    - how to change email, mobile number and address details on my internet banking
+    - change details on my internet banking
+    - how to change my internet banking details
+    - change my internet banking details
+    - how do i change my internet banking details
+- intent: register_for_ecocash
+  examples: |
+    - ecocash registration
+    - how i can do ecocash registration
+    - how you do ecocash registation
+    - how can i register for ecocash
+    - how do i register for ecocash
+    - ecocash register
+    - help me in registering ecocash
+    - eco cash register steps
+    - steps to register ecocash
+    - help me in register for ecocash
+    - eco cash register
+    - how to register for ecocash
+    - how do i do register for ecocash
+    - ceocash registration
+- intent: register_time_for_ecocash
+  examples: |
+    - How long does it take?
+    - time taken to rigister ecocash
+    - How long does it take to register ecocash?
+    - How long it take to register ecocash?
+    - How long it take to register eco cash?
+    - eco cash registartion time
+    - when will be ecocash account register
+- intent: ecocash_transaction_limit
+  examples: |
+    - How much is the limit per transaction?
+    - How much is the limit per transaction
+    - ecocash limit per transaction
+    - limit per transaction in ecocash
+    - limit per transaction
+    - eco cash limit per transaction
+    - what is the limit per transaction in ecocash
+    - ecocash limit per transaction
+    - eco cash limit per transaction
+    - ecocash transaction limit
+    - limit for ecocash transaction
+- intent: ecocash_charges
+  examples: |
+    - How much are the charges?
+    - How much are the charges for ecocash
+    - what are the charges for ecocash
+    - ecocash charges
+    - eco cash charges
+    - what are the charges for ecocash?
+    - ecocash charge
+    - charge for eco cash account
+    - what are the charges for eco cash
+    - charges on ecocash
+    - what about ecocash charges
+- intent: cbz_debit_card_charges
+  examples: |
+    - standard charges on cbz debit card
+    - charges on cbz account debit card
+    - cbz acc debit card charges
+    - charge rates on cbz debit card
+    - cbz debit card charge rates
+    - rate of charges on cbz debit card
+    - charge on cbz card
+    - How much are the charges for cbz?
+    - cbz debit card charges or rates
+    - rate of debit card charges on cbz
+    - charges on cbz debit card
+    - debit card charges on cbz accounr
+    - cbz debit card charges
+    - debit card charge on cbz
+    - charges on cbz
+    - cbz debit card charges
+    - debit card charges for cbz
+    - How much are the charges for debit card cbz
+    - How much are the charges for cbz debit card
+    - debit card charges on cbz account
+- intent: cbz_debit_card_available
+  examples: |
+    - How long does it take to be available after application?
+    - How long does it take to be available after application of cbz?
+    - How long does it take to be cbz available after application?
+    - how much time take to be available after application
+    - cbz card application after available
+    - How long does it take after application for it to become available?
+    - How long does it take for a cbz application to become available?
+    - After applying cbz, how long does it take to become available?
+    - How long does it take for cbz availability?
+    - How long does it take for a cbz application to be available?
+    - How long it take to be available the cbz after application?
+- intent: cbz_debit_card_replacement
+  examples: |
+    - How do l apply for a card or get a replacement?
+    - cbz card replacement
+    - how to replace the cbz card
+    - cbz debit card replacement
+    - how to apply for cbz debit card replacement
+    - apply for cbz debit card replacement
+    - replace cbz debit card application
+    - How do l apply for a card or get a cbz cardreplacement?
+- intent: block_cbz_atm_card
+  examples: |
+    - How do l block my ATM card if stolen?
+    - how to block my cbz atm card
+    - block my cbz debit card
+    - how to block my cbz debit card
+    - help in blocking cbz debit card
+    - block my cbz debit card atm
+    - how to block cbz atm debit card
+    - how to block stolen cbz debit card
+    - block stolen debit card
+- intent: how_to_get_cbz_debit_card
+  examples: |
+    - how do i get cbz debit card
+    - how to get cbz debit card
+    - A CBZ Debit Card: How Do I Get One?
+    - How can I obtain a CBZ Debit Card?
+    - Where can I get a CBZ Debit Card?
+    - I want to apply for a CBZ Debit Card.
+    - help me in getting cbz debit card
+    - how to get cbz card
+    - The CBZ Debit Card application process.
+    - I want to apply for a CBZ debitcard.
+    - cbz debit card apply
+    - How can I apply for a CBZ Debit Card?
+    - I want to apply for a CBZ debit card?
+    - how to apply for cbz debit card
+- intent: what_is_debit_card
+  examples: |
+    - What is a Debit Card?
+    - debit card
+    - what does debit card
+    - help me in debit card
+    - explain debit card
+    - what meant debit card
+    - what is visa debit catrd
+    - what is meant by debit card
+    - wt is debitcard
+    - What exactly is a debit card?
+    - Describe the debit card
+    - How do debit cards work?
+    - wht is debit card
+    - debit card means
+    - debit card meaning
+    - what is meaning by debit card
+- intent: can_use_cbz_debit_card_on_internet
+  examples: |
+    - Can I use my CBZ Bank Debit Card to shop on the internet?
+    - can we use my CBZ Bank Debit Card to shop on the internet?
+    - where i can use my cbz bank debit card
+    - Can I shop online with my CBZ Bank Debit Card?
+    - Is it possible to shop online with my CBZ Bank debit card?
+    - Can I make online purchases using my CBZ Bank Debit Card?
+    - How can I shop online with my CBZ Bank Debit Card?
+    - can i use my cbz bank debit card to shop on internet
+    - can i use my cbz debit card on internet for shoping
+    - can we use cbz debit card on internet for online shoping
+    - can i use cbz bank debit card for online shoping
+    - can we use cbz debit card for online shoping
+    - can we do online shoping with my cbz debit card
+    - could i use my cbz debit card for online shoping
+
+- intent: can_use_cbz_debit_card_after_loaded_funds
+  examples: |
+    - Can I use my Debit Card after the loaded funds have been exhausted?
+    - can i use cbz debit card after funds been completed
+    - can i use cbz card after loaded funds completed
+    - After the loaded funds have been used up, can I still use my debit card?
+    - Can I still use my debit card after the money deposited on it has been used up?
+    - If the loaded money on my debit card run out, can I still use it?
+    - Is my  Debit Card still usable after the loaded monies have been used up?
+    - After the loaded funds have been used up, can I still use my CBZ Card?
+    - Can I use my cbz Debit Card after the loaded funds have been exhausted?
+    - can i use my cbz debit card after funds have been exhausted?
+    - can we use my cbz card after the loaded funds have been exhausted?
+- intent: can_withdraw_from_cbz_debit_card
+  examples: |
+    - Can I withdraw cash using my CBZ Bank Debit Card?
+    - Can we withdraw cash using my CBZ Bank Debit Card?
+    - can i use my cbz bank debit card for withdraw cash
+    - Can I withdraw amount using my CBZ Bank Debit Card?
+    - Can I withdraw cash using my CBZ Bank?
+    - Can I make cash withdrawals with my CBZ Bank debit cards?
+    - Can I use my CBZ Bank Debit Card to make cash withdrawal?
+    - Can I use my CBZ Bank Debit Card to make cash withdrawals?
+    - Can I make cash withdrawals with my CBZ Bank debit card?
+    - Can I use my CBZ Bank Debit Card to encash cash?
+    - My CBZ Bank debit card is able to be cashed in for cash.
+    - My CBZ Bank debit card allows me to encash cash.
+    - Can I use my CBZ Bank debit card to purchase cash?
+    - I have a CBZ Bank debit card. Can I get cash?
+    - Can I get cash with my CBZ Bank debit card?
+    - Can my CBZ Bank debit card be used to obtain funds?
+    - Can we withdraw amount using my CBZ Bank Debit Card?
+    - can i get cash with my cbz bank debit card
+- intent: how_to_load_funds_on_cbz_debit_card
+  examples: |
+    - How do I load funds on my Debit Card?
+    - How to load funds on my Debit Card?
+    - how to load the funds into my cbz bank debit card
+    - How can I load funds on my cbz Debit Card?
+    - help me in loading funds on my Debit Card?
+    - load funds on my cbz debit card
+    - How exactly do I add money to my cbz Debit Card?
+    - How can I load money onto my cbz Debit Card?
+    - How do I add money to my CBZ Debit Card?
+    - How can I add cash to my CBZ debit card?
+    - I need to know how to add money to my CBZ debit card.
+    - How do I add cash to my CBZ debit card?
+    - load funds to cbz bank
+    - My CBZ Debit Card is empty. How can I load money?
+    - help me in loading funds into cbz bank debit card
+- intent: time_to_receive_cbz_debit_card
+  examples: |
+    - How long does it take to receive a Debit Card?
+    - How much time it take to receive a Debit Card?
+    - How long does it take to receive cbz Debit Card?
+    - How soon can I expect to get a debit card?
+    - How much time does it take to get a debit card?
+    - What is the turnaround time for a debit card?
+    - How long does it take to get a debit card?
+    - How quickly can you get a CBZ Debit Card?
+    - How quickly can you get a debit Card?
+    - How much time it take to receive a cbz bank Debit Card?
+    - time taken to receive a cbz debit card
+    - time taken to receive a cbz bank debit card
+    - how much time it will take to receive a cbz debit card
+- intent: forget_debit_card_pin
+  examples: |
+    - I have forgotten my Debit Card PIN, what should l do?
+    - I forgotten my Debit Card PIN, what should l do?
+    - how to get my debit card pin
+    - how to reset my debit card pin
+    - what to do for getting pin for my cbz bank debit card
+    - help me in getting cbz debit card pin
+    - how to reset cbz debit card pin
+    - What should I do if I've forgotten my debit card's PIN?
+    - What should I do if I forget the PIN for my debit card?
+    - What should I do if I can't remember my debit card PIN?
+    - What should I do if I forget my debit card PIN?
+    - What should I do if I forget my CBZ Debit Card PIN?
+    - What should I do if I forget the PIN for my CBZ debit card?
+    - how to reset my debit card pin
+    - i forget my cbz debit card pip, what to do?
+- intent: lost_debit_card
+  examples: |
+    - I have lost my Debit Card, what should l do?
+    - I have lost my Debit Card, what can i do?
+    - I lost my Debit Card, what should l do?
+    - What should I do if my debit card is lost?
+    - What should I do if I lose my debit card?
+    - How should I proceed if I lose my debit card?
+    - What should I do if I misplace my debit card?
+    - What should I do if my debit card is lost?
+    - What should I do if my CBZ debit card is lost?
+    - What should I do if I lose my CBZ debit card?
+    - What should I do if my CBZ debit card is lost?
+    - How should I proceed if I lose my CBZ debit card?
+    - I lost my Debit Card, what can l do?
+    - help me in finding cbz debiut card
+    - I lost my cbz Debit Card, what should l do?
+    - I  lost my cbz Debit Card, what can l do?
+    - I have lost my Debit Card, what could l doo?
+- intent: incorrect_debit-card_pin
+  examples: |
+    - If the ATM displays the message Incorrect PIN, what should l do?
+    - what should i do, if atm displays incorrect pin
+    - atm displaying incorrect pin, what should i do
+    - what to do atm displays invalid pin
+    - atm showing message as incorrect pin
+    - what should i do if my card detials are incorrect
+    - if the atm displayes the message incorrect pin entered what to do
+    - what to do if atm shows incorrect pin
+    - what to do if atm displays incorrect cbz bank debit card ip
+- intent: cbz_withdraw_fee
+  examples: |
+    - Is there any fee for withdrawing cash using my CBZ Bank Debit Card?
+    - is any charges for withdrawing cash using my cbz debit card
+    - is there any charges or fees for withdraw cash from my cbz bank debit card
+    - what are the charges for cbz debit card for withdrawl
+    - charges for withdraw the cash from my cbz debit card
+    - charges on cbz bank debit card for cash withdraw
+- intent: cbz_card_stuck_in_atm_machine
+  examples: |
+    - My Card got stuck in the ATM machine?
+    - what to do if my debit card got stucked in atm machine
+    - what can i do if my cbz debit card got stucked in atm machine
+    - my cbz bank debit card is stuckedin atm machine
+    - how to get my stucked cbz bank debit card
+    - what should i do to get my stucked cbz debit card in atm machine
+    - my cbz debit card got stucked at atm machine
+- intent: wrong_name_on_cbz_debit_card
+  examples: |
+    - My Debit Card has the wrong name on it, what should l do?
+    - my name is wrong on cbz debit card
+    - name on the cbz debit card is wrong
+    - wrong name printed on the cbz debit card
+    - what to do to change my name on the cbz bank debit card
+    - how to change my name on the cbz bank debit card
+    - rename my name on the cbz bank debit card
+    - My Debit Card has the wrong details on it, what can l do?
+- intent: damaged_cbz_debit_card
+  examples: |
+    - My Debit Card is damaged, what should l do?
+    - My Debit Card is damaged
+    - My Debit Card is damaged, what to do
+    - debit card is damaged
+    - my cbz debit card got damaged
+    - how to get new cbz debit card
+    - my cbz bank debit card is damaged, what to do
+    - what should i do, my cbz debit card is damaged
+- intent: atm_rejected_cbz_debit_card
+  examples: |
+    - What if the ATM rejects my Card?
+    - What can i do if the ATM rejects my Card?
+    - ATM rejects my Card?
+    - my atm is rejected by atm
+    - cbz atm card is rejected in atm
+    - atm rejects my cbz debit card
+    - what to do if my cbz debit card rejects by atm
+    - atm rejects my cbz bank debit card
+    - my card ius rejected by atm machine
+    - atm is not accepting my cbz debit card
+    - what to do if my card is not accepted by atm machine
+    - cbz bank debit card is not accepted by atm machine
+

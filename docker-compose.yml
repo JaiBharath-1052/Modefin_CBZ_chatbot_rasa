@@ -1,0 +1,130 @@
+version: "2.0"
+
+#x-rasa-services: &default-rasa-service
+  #restart: unless-stopped
+  #image: "rasa/rasa:2.6.2-full"
+  #volumes:
+    #- ./.config:/.config
+  #expose:
+    #- 5005
+  #command: rasa run --port 5005 --enable-api --debug
+  ##command: rasa run -m --models --port 5005 --enable-api --debug
+  #depends_on:
+    #- rasa
+
+#x-rabbitmq-credentials: &rabbitmq-credentials
+  #RABBITMQ_HOST: "rabbit"
+  #RABBITMQ_USERNAME: "user"
+  #RABBITMQ_PASSWORD: E3KNprkEAvgSE0T # ${RABBITMQ_PASSWORD}
+
+services:
+  rasa:
+    restart: always
+    image: "rasa/rasa:2.6.2-full"
+    expose:
+      - "5002"
+    ports:
+      - "5005:5005" 
+    volumes:
+      - ./:/app
+      - ./models:/app/models
+      - ./addons:/app/addons
+      - ./environments.yml:/app/environments.yml
+      - ./credentials.yml:/app/credentials.yml
+      - ./endpoints.yml:/app/endpoints.yml
+      - ./logs:/logs
+      - ./auth:/app/auth
+    command: "run --enable-api --cors \"*\" --debug" 
+      # bash -c "rm -rf models/* && rasa  run -m models --enable-api --cors \"*\" --debug"
+      #- run 
+      #- -m
+      #- models
+      #- --enable-api
+      #- --cors
+      #- "*"
+      #- --debug     
+    networks:
+    - all
+
+  action_server:
+    restart: always
+    image: "rasa/rasa-sdk:2.8.6"
+    volumes:
+      - ./actions:/app/actions
+    ports:
+      - "5055:5055"
+    command: " run actions --debug --port 5055" # ["rasa", "run", "actions"]
+      #- rasa
+      #- run
+      #- actions
+      #- --port 5055
+    #depends_on:
+      #- rasa-production
+    networks:
+    - all
+  #app:
+    #image: rasa/action_server # "rasa/rasa-x-demo:${RASA_X_DEMO_VERSION}" # <action_image:tag>
+    #expose: 5055
+
+  db:
+    restart: always
+    image: "bitnami/postgresql:11.9.0"
+    expose:
+      - "5432"
+    #ports:
+      #- "5432:5432"
+    environment:
+      POSTGRESQL_USERNAME: admin  # "${DB_USER:-admin}"
+      POSTGRESQL_PASSWORD: JKULYzOzSp3I5l6 # "${DB_PASSWORD}"
+      POSTGRESQL_DATABASE: rasa # "${DB_DATABASE:-rasa}"
+    volumes:
+      - ./db:/bitnami/postgresql
+      - .db:/data/db
+  
+  duckling:
+    restart: always
+    image: rasa/duckling:latest
+    ports:
+      - "8000:8000"
+    networks:
+    - all
+    #command: ["duckling-example-exe", "--no-access-log", "--no-error-log"]
+  
+  redis:
+    restart: always
+    image: "bitnami/redis:6.2.1"
+    environment:
+      REDIS_PASSWORD: WcN3uz4.8eMmk74 # ${REDIS_PASSWORD}
+    expose:
+      - "6379"
+  rabbit:
+    restart: always
+    image: "bitnami/rabbitmq:3.8.14"
+    environment:
+      RABBITMQ_HOST: "rabbit"
+      RABBITMQ_USERNAME: "user"
+      RABBITMQ_PASSWORD: E3KNprkEAvgSE0T # ${RABBITMQ_PASSWORD}
+      RABBITMQ_DISK_FREE_LIMIT: "{mem_relative, 0.1}"
+    expose:
+      - "5672" 
+  #nginx:
+    #restart: always
+    #image: nginx:1.19
+    #ports:
+      #- 80:80
+      #- 443:443
+      #- 8888:8888
+    #volumes:
+      #- ./certs:/etc/certs
+      #- ./nginx:/etc/nginx/conf.d
+      #- ./nginx-config-files/nginx.conf:/etc/nginx/nginx.conf
+      #- ./nginx-config-files/ssl.conf.template:/etc/nginx/templates/ssl.conf.template      
+      #- ./nginx-config-files/rasax.nginx.template:/etc/nginx/templates/rasax.nginx.template
+    #depends_on:
+      #- "action_server"
+      #- "rasa"
+networks:
+  all:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "true" 

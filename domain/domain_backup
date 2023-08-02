@@ -1,0 +1,507 @@
+#version: "3.1"
+version: "2.0"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+  - bot_challenge
+  - balance
+  - billpayment
+  - cardless_query1
+  - cardless
+  - chequebook
+  - covid_19
+  - costumer_care
+  - electricity_pymt
+  - jokes
+  - feedback
+  - fullstmt
+  - ministmt
+  - proof_of_payment
+  - recharge
+  - trfr_types
+  - welcome
+  - goodbye
+  - greet
+  - international_transfer
+  - thanks
+  - change_password
+  - register_for_autopay
+  - loan_products
+  - personal_loan
+  - home_loan
+  - business_loan
+  - vacation_loan
+  - confirm_loan
+  - deny_loan
+  - register_mobile_banking
+  - manual_registration_for_invalid_details
+  - login_credentials_error
+  - ussd_code
+  - reset_mobile_banking_mpin
+  - required_docs_for_visa_gold_card
+  - visa_card_cost
+  - min_bal_for_visa_gold_card
+  - where_to_use_visa_gold_card
+  - monthly_charges_for_visa_gold_card
+  - card_link_to_paypal
+  - when_card_will_activate
+  - receive_sms_alerts
+  - transaction_limit
+  - rtgs_transfer
+  - time_take_to_reflect_amount
+  - zipit_charges
+  - zipit_reflect_time
+  - zipit_register
+  - zipit_limit_per_day
+  - zipit_transaction_cost_to_recall
+  - how_to_login_internet_bank
+  - pop_corporate_user
+  - individual_user_bank_statement
+  - internet_bank_password_change
+  - register_for_obdx
+  - register_time_for_ecocash
+  - register_for_ecocash
+  - ecocash_transaction_limit
+  - ecocash_charges
+  - cbz_debit_card_charges
+  - cbz_debit_card_available
+  - cbz_debit_card_replacement
+  - block_cbz_atm_card
+  - how_to_get_cbz_debit_card
+  - what_is_debit_card
+  - can_use_cbz_debbit_card_on_internet
+  - can_use_cbz_debit_card_after_loaded_funds
+  - can_withdraw_from_cbz_debit_card
+  - how_to_load_funds_on_cbz_debit_card
+  - time_to_receive_cbz_debit_card
+  - forget_debit_card_pin
+  - lost_debit_card
+  - incorrect_debit-card_pin
+  - cbz_withdraw_fee
+  - cbz_card_stuck_in_atm_machine
+  - damaged_cbz_debit_card
+  - atm_rejected_cbz_debit_card
+  - wrong_name_on_cbz_debit_card
+actions:
+  - action_jokes
+  #- action_ask_otp
+  #- action_save_conversation
+  - action_restart
+  - action_hello_world
+
+entities:
+  - location
+  - currency-name
+  - currency-name1
+  - any
+  - duration
+  - number
+  - account_number
+
+# slots:
+#   any:
+#     type: text
+#     influence_conversation: true
+#   currency-name:
+#     type: text
+#     influence_conversation: true
+#   currency-name1:
+#     type: text
+#     influence_conversation: true
+#   duration:
+#     type: text
+#     influence_conversation: true
+#   location:
+#     type: text
+#     influence_conversation: true
+
+
+
+# slots:
+#   any:
+#     type: text
+#     values:
+#     - International
+#     - Other Bank
+#     - Same Bank
+#     - Own
+#     #influence_conversation: false
+#     mappings:
+#     - type: from_text
+#       intent: fund_trfr
+#   currency-name:
+#     type: text
+#     values:
+#     - KES
+#     - USD
+#     #influence_conversation: false
+#     mappings:
+#     - type: from_entity
+#       intent: forex_rates
+#   currency-name1:
+#     type: text
+#     values:
+#     - KES
+#     - USD
+#     #influence_conversation: false
+#     mappings:
+#     - type: from_entity
+#       intent: forex_rates
+#   duration:
+#     type: text
+#     values:
+#     - 1 year
+#     - 2 year
+#     - 3 months
+#     - 1year
+#     - one year
+#     - 6 months
+#     - half year
+#     #influence_conversation: false
+#     mappings:
+#     - type: from_entity
+#       intent: stmt_duration
+#   location:
+#     type: text
+#     #influence_conversation: false
+#     mappings:
+#     - type: from_entity
+#       intent: cardless
+#   location_name:
+#     type: text
+#     values:
+#     - agent
+#     - atm
+#     - branch
+#     - ATM
+#     - Agent
+#     - Branch
+#     #influence_conversation: false
+#     mappings:
+#     - type: from_entity
+#       intent: location
+
+# slots:
+#   any:
+#     type: text
+#     influence_conversation: false
+    
+#   currency-name:
+#     type: text
+#     influence_conversation: true
+    
+#   currency-name1:
+#     type: text
+#     influence_conversation: true
+    
+#   duration:
+#     type: text
+#     influence_conversation: true
+    
+#   location:
+#     type: text
+#     influence_conversation: true
+    
+#   location_name:
+#     type: text
+#     influence_conversation: true
+    
+
+
+
+responses:
+  utter_iamabot:
+  - text: I am a DIVA bot, powered by Rasa chatbot Team.
+
+  utter_goodbye:
+  - text: Good Bye!
+  utter_balance:
+  - text: " You can check account balance by following steps below :\n\n\
+          1. Login using Mobile Banking User ID and M-Pin\n2. Click on My accounts.\n3. Click on Balance Enquiry.\n4. Select the Account and click on submit.\n5. Your account balance will be displayed for the selected account."
+
+  utter_billpayment:
+  - text: "1. Login to Mobile app.\n2. Go to the **Bill payments** option present\
+      \ on the Home or Menu screen.\n3. By clicking on the same you will be taken\
+      \ to the Payments page with configured biller"
+  utter_cardless_query1:
+  - text: "Yes, Customer can intiate transaction for Other person by providing related\
+      \ mobile number and Account Number.\nOTP will be sent to provided Mobile Number\
+      \ and the person can get the cash by providing OTP at any Agent or ATM location"
+  utter_chequebook:
+  - text: "Cheque book can be requested from **Cheque Book Request** menu selecting \
+         **No of Leaves** from drop down."
+  utter_covid_19:
+  - text: "You can check account balance by following steps below:\n\n\
+          1. Login using Mobile Banking User ID and M-Pin\n\n2. Click on My accounts.\n\n
+          3. Go to COVID-19 section to donate for different NGOs."
+  utter_costumer_care:
+  - text: "Download and install Mobile App\n1. Click on Contact Us in pre-login\n\
+          2. Click on the Call or Email icon to communicate using your preferred mode"
+  utter_electricity_pymt:
+  - text: "Login to Mobile app.\nGo to the **Bill payments** option present on\
+      \ the Home or Menu screen.\nBy clicking on the same you will be taken to the\
+      \ Payments page with configured biller From Biller drop down,select Electricity.\n\
+      Enter the details like meter no, amount etc and transaction will be processed by providing transaction Pin"
+  utter_feedback:
+  - text: "Download and install Mobile App\n1. Go to **Feedback** service.\n2. Select\
+      \ Category\n3. Enter the fields available in the form and submit\n4. Feedback\
+      \ will be sent to Bank Team"
+  utter_fullstmt:
+  - text: "You can check Full Statement by following steps below:\n1. Login using\
+      \ Mobile Banking User ID and M-Pin.\n2. Click on My accounts.\n3. Click on Full\
+      \ Statement.\n4. Select the Start Date and End Date , click on Submit.\nAn e-mail\
+      \ will be sent to your registered e-mail ID with detailed statement for desired\
+      \ period."
+  utter_ministmt:
+  - text: "You can check Mini Statement by following steps below:\n1. Login using\
+      \ Mobile Banking User ID and M-Pin.\n2. Click on My accounts.\n3. Click on Mini\
+      \ Statement.\nSummary of your last 5 transactions is displayed."
+  utter_proof_of_payment:
+  - text: "Service used to check the Payment details,It is usually a receipt/Screenshot.\
+      Customer will be provided with options either to send the payment details as SMS, Email or download."
+  utter_recharge:
+  - text: "1. Login to Mobile app.\n2. Go to the **Recharge** option present on the\
+      \ Home or Menu screen.\nBy clicking on the same you will be taken to the recharge\
+      \ page with different options available to you"
+  utter_trfr_types:
+  - text: "You can carry out following types of Funds Transfer\n1. Transfer to your\
+      \ own accounts in same bank with/without Beneficiary.\n2. Transfer to third\
+      \ party accounts in same bank with/without Beneficiary.\n3. Transfer to Other\
+      \ Bank account with/without Beneficiary.\n4. Transfer to International Bank\
+      \ account with/without Beneficiary.\n5. Send money to any Mobile number"
+  utter_welcome:
+  - text: "Hi! My name is DIVA and I am a Chatbot.\nI can help you with Miracle Bank\
+      \ related queries.\n\nPlease type your question or queries as some examples\
+      \ given below\n 1.  How can I find out my Account Balance?\n 2.  How can I check\
+      \ Mini Statement relating to my account?\n 3.  How can I check Full Statement\
+      \ relating to my account?\n 4.  How can I apply for Cheque Book?\n 5.  How can\
+      \ I do a mobile Recharge?\n 6.  What kind of Funds Transfer can I do in mobile\
+      \ banking service?\n 7.  What is the detailed process of using Cardless Withdrawal\
+      \ service using ATM?\n 8.  How do I contact Bank Customer Care?\n 9.  How do I\
+      \ support for covid-19 fund?"
+      
+  utter_cardless:
+  - text: "Download and install Mobile App\n1. Click on Locate us service in prelogin\n\
+           2. Google map with all the locations of {location} will be displayed\n3. Click\
+           \ on filter to choose from {location}\n4. By clicking on particular {location},\
+           it redirects to Google Map and shows the direction"
+  utter_forex_rates:
+  - text: "You can check Forex Rates by following steps below:\n1. Launch the Mobile\
+      \ Banking Application.\n2. Click on Forex rates in footer of login menu.\n3.\
+      \ Application displays latest Forex rates."
+  utter_fund_trfr:
+  - text: "You can Transfer funds to {any} account by following steps below:\n1. Login\
+      \ using Mobile Banking User ID and M-Pin.\n2. Click on Funds Transfer service,\
+      \ You'll get the list of FT services.\n3. Select FT {any} Account service, enter\
+      \ the required details and Submit the form to get the confirmation page.\n4.\
+      \ Enter T-Pin to complete the transaction to get a successfully transferred\
+      \ result page along with the transaction ID.\n5. Keep a note of Transaction\
+      \ ID for further use."
+  utter_location:
+  - text: "Download and install Mobile App\n1. Click on Locate us service in prelogin\
+      \ \n2. Google map with all the locations of {location} will be displayed\n3.\
+      \ Click on filter to choose from {location}\n4. By clicking on particular {location},\
+      \ it redirects to Google Map and shows the direction"
+  utter_pop_steps:
+  - text: "Below steps are involved to download Proof of Payment\n1. Customer should\
+      \ login to Mobile Banking\n2. Navigate to Proof oF Payment\n3. Select Payment\
+      \ Type as {any} and duration\n4. Statement can be sent as SMS, Email or Can\
+      \ be downloaded"
+  utter_stmt_duration:
+  - text: "You can make full statement request up to 6 months in the application.\n\
+      For statement more than 6 months, please visit your near branch."
+  utter_international_transfer:
+  - text: "You can do an international transfer from your mobile banking app. \n\ Follow the steps"
+  utter_thanks:
+  - text: "Most Welcome, Hope Enjoyed!!"
+  utter_change_password:
+  - text: "After you have logged in, you can change your password using the **Change password** option in the profile section.\
+          You have to type your current password and the new password you have chosen in their respective boxes."
+  utter_register_for_autopay:
+  - text: "To register for auto pay follow the below steps: \n\n\
+          1. Click on the Autopay register link on the left side margin. \n
+          2. Select the Credit Card number that you want to register for the Autopay facility \n
+          3. If you want the full amount of your statement to be paid from your bank account select the Total amount due link, and if you want only the minimum amount due to be paid, select Minimum Amount Due.\n
+          4. Click on Continue and then on Confirm."
+  utter_register_mobile_banking:
+  - text: "Dial *230#  (or) \n\n
+          Kindly download CBZ Touch on Google Playstore/Apple Store. \n
+          Click sign up, select claim mpin , agree to terms and conditions, enter requested details. \n
+          Mobile number to be entrered as 263*********. \
+          National ID entered as XX-XXXXX-X-XX." 
+  utter_manual_registration_for_invalid_details:
+  - text: "Fill in a form for manual registration and submit on contactcentrestaff@cbz.co.zw for processing."
+  utter_login_credentials_error:
+  - text: "Call on our toll free number 460/461 for assistance"
+  utter_ussd_code:
+  - text: "Its *230#"
+  utter_reset_mobile_banking_mpin:
+  - text: "Select **Forgot M-Pin**, enter the details required and submit (or)\n\n\
+        Fill in a reset form and submit at nearest branch or on email contactcentrestaff@cbz.co.zw"
+
+  utter_required_docs_for_visa_gold_card:
+  - text: "An existing Nostro account with CBZ, proof of residence, proof of income and US$5.00.\
+
+           For a student visa you will need copy of ID, proof of residence, University acceptance letter, passport sized photo and US$5.00"
+  utter_visa_card_cost:
+  - text: "Joining fee Individual AUTO US$5.00"
+  utter_min_bal_for_visa_gold_card:
+  - text: "The minimum balance is USD$5.00"
+  utter_where_to_use_visa_gold_card:
+  - text: "You can use it anywhere in the world where VISA is accepted."
+  utter_monthly_charges_for_visa_gold_card:
+  - text: "Monthly service charge is USD$2.00"
+
+  utter_card_link_to_paypal:
+  - text: "Yes you can link the card to PayPal."
+  utter_when_card_will_activate:
+  - text: "Once you get your Visa Gold Card, check your balance on the ATM to activate the card."
+  utter_receive_sms_alerts:
+  - text: "Yes, you do and you receive your statements on email"
+  utter_transaction_limit:
+  - text: "USD500.00 cash withdrawal, Online payment USD5000.00 and USD5000.00 swiping USD"
+
+  utter_rtgs_transfer:
+  - text: "Individual RTGs transfer 3% Min $350 Max $3500. Corporate: 3% Min $500..........Max $5500."
+
+  utter_time_take_to_reflect_amount:
+  - text: "within 48 working hours"
+  utter_zipit_charges:
+  - text: "Other bank account (ZIPIT) AUTO 3% Min $90......Max $600......"
+
+  utter_zipit_reflect_time:
+  - text: "It is instant"
+  utter_zipit_register:
+  - text: "You go on Funds Transfer on CBZ Touch, Select Other Local Bank,\
+           enter details that prompt under Type of Transfer on the last field select ZIPIT and submit."
+
+  utter_zipit_limit_per_day:
+  - text: "ZWL $20 000.00"
+  utter_zipit_transaction_cost_to_recall:
+  - text: "ZIPIT Recall charge on Request AUTO ZWL$2 500"
+
+  utter_how_to_login_internet_bank:
+  - text: "On home screen click login, insert details"
+  utter_pop_corporate_user:
+  - text: "Print the e-receipt soon after making payment (or) You can retrieve the POP by searching past transactions."
+
+  utter_individual_user_bank_statement:
+  - text: "1. From dashboard **click** menu and select accounts.\n
+           2. Select **current and savings** then click view.\n
+           3. Select the account you wish to view statement."
+  utter_internet_bank_password_change:
+  - text: "Click menu, go to Account setting and select change password."
+  utter_register_for_obdx:
+  - text: "Complete a registration form and submit on contactcentrestaff@cbz.co.zw.\n\n\
+          Kindly note password format comprises lower case, upper case letter and numbers must be entered accordingly."
+  utter_register_for_ecocash:
+  - text: "1. Select Funds transfer on CBZ Touch and go on External Wallet Account.\n\n\
+           2. Go on Ecocash and click on Ecocash Registration and submit.\n
+           3. Once done dial *151# and go on option 8 and transact."
+  utter_register_time_for_ecocash:
+  - text: "It's instant"
+  utter_ecocash_transaction_limit:
+  - text: "ZWL$20 000.00"
+  utter_ecocash_charges:
+  - text: "From Bank Account to Wallet AUTO 1.5% Min $30. Max $NIL. \
+           From Wallet to Bank Account AUTO 1.5% $30."
+  utter_cbz_debit_card_charges:
+  - text: "ZWL$300"
+  utter_cbz_debit_card_available:
+  - text: "5 working days"
+  utter_cbz_debit_card_replacement:
+  - text: "You fill in a form and submit at your nearest branch or on contact@cbz.co.zw"
+  utter_block_cbz_atm_card:
+  - text: "Call us on our toll free number 460/461 to have your card hot listed."
+  utter_what_is_debit_card:
+  - text: "A Visa Debit Card works basically like a cheque.\n
+           The amount value of your purchase is deducted directly from your cheque/savings account.\n\
+           
+          You can use your Visa Debit Card to do the following:\n\n\
+          * ATM cash withdrawals\
+          * Purchases on domestic networks like POS machines\
+          * Purchase goods or pay for services online."
+  utter_can_use_cbz_debbit_card_on_internet:
+  - text: "Yes"
+  utter_can_use_cbz_debit_card_after_loaded_funds:
+  - text: "No, the Visa Debit Card can only work when your account is funded"
+  utter_can_withdraw_from_cbz_debit_card:
+  - text: "Yes, the Card can be used on our network of CBZ ATMs or in Branches through our Branch POS. Terminals."
+  utter_how_to_get_cbz_debit_card:
+  - text: "You can apply from any CBZ Branch nearest to you or make a request on CBZ Touch or through the Contact Centre."
+  utter_how_to_load_funds_on_cbz_debit_card:
+  - text: "You deposit funds in your linked Savings or Current Account"
+  utter_time_to_receive_cbz_debit_card:
+  - text: "Three working days"
+  utter_forget_debit_card_pin:
+  - text: "You can go to your nearest CBZ Bank Branch and request for a PIN replacement"
+  utter_lost_debit_card:
+  - text: "You call our 24hour Contact Centre on our Hotline Numbers 0242770550, 0242780888 or 0242791254 to\
+          have the Card blocked and order a new Card."
+  utter_incorrect_debit-card_pin:
+  - text: "You can try again if you had inserted an incorrect PIN. It gives you 3 chances.\n
+          If you have forgotten the PIN, you can visit any CBZ Bank Branch for PIN reset."
+  utter_cbz_withdraw_fee:
+  - text: "Yes, 3% Minimum ZW$100.... No Maximum"
+  utter_cbz_card_stuck_in_atm_machine:
+  - text: "You can get inside the CBZ Branch and collect the Card upon positive identification"
+  utter_wrong_name_on_cbz_debit_card:
+  - text: "Contact any nearest CBZ Bank Branch for rectification"
+  utter_damaged_cbz_debit_card:
+  - text: "You can apply from any CBZ Bank Branch nearest to you or request for replacement on CBZ Touch."
+  utter_atm_rejected_cbz_debit_card:
+  - text: "You can visit any CBZ Bank Branch during operating hours or contact the Bank through our\
+           Hotline Numbers `0242770550`, **0242780888** or *0242791254*."
+  utter_loan_products:
+  - text: "We have the following loan products, Please choose which loan product do you want?"
+    buttons:
+    - title: Personal Loan
+      payload: /personal_loan
+    - title: Business Loan
+      payload: /business_loan
+    - title: Home Loan
+      payload: /home_loan
+    - title: Vacation Loan
+      payload: "/vacation_loan"
+  utter_personal_loan:
+  - text: "We provide Low, fixed-rate personal loans with no pre-closure fees. Do you want to apply?"
+    buttons:
+    - title: 'YES'
+      payload: /confirm_loan
+    - title: 'NO'
+      payload: /deny_loan
+  utter_business_loan:
+  - text: "We provide competitive-rate **business loans** with no collaterals. Do you want to apply?"
+    buttons:
+    - title: 'YES'
+      payload: /confirm_loan
+    - title: 'NO'
+      payload: /deny_loan
+  utter_home_loan:
+  - text: "We provide competitive-rate **home loans** with no collaterals. Do you want to apply?"
+    buttons:
+    - title: 'YES'
+      payload: /confirm_loan
+    - title: 'NO'
+      payload: /deny_loan
+  utter_vacation_loan:
+  - text: "We provide Low, better fixed-rate **vacation loans** with no pre-closure fees."
+    buttons:
+    - title: 'YES'
+      payload: /confirm_loan
+    - title: 'NO'
+      payload: /deny_loan
+  utter_confirm_business_loan:
+  - text: "Please click on the link to apply [business loan](Business loan)"
+  utter_confirm_personal_loan:
+  - text: "Please click on the link to apply [personal loan](Personal loan)"
+  utter_confirm_home_loan:
+  - text: "Please click on the link to apply [home loan](Home loan)"
+  utter_confirm_vacation_loan:
+  - text: "Please click on the link to apply [vacation loan](Vacation loan)"
+  utter_deny_loan:
+  - text: "Thanks for you interest. You can check our other products"
+

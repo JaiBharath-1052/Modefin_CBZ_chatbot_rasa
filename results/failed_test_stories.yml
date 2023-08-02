@@ -1,0 +1,51 @@
+version: "2.0"
+stories:
+- story: sad path 1 (./venv/lib/python3.8/site-packages/rasa/cli/initial_project/tests/test_stories.yml)
+  steps:
+  - intent: greet  # predicted: welcome: hello
+  - action: utter_greet  # predicted: action_default_fallback
+  - intent: mood_unhappy  # predicted: welcome: not good
+  - action: utter_cheer_up  # predicted: action_default_fallback
+  - action: utter_did_that_help  # predicted: action_listen
+  - intent: affirm  # predicted: confirm_loan: yes
+  - action: utter_happy  # predicted: action_default_fallback
+- story: sad path 2 (./venv/lib/python3.8/site-packages/rasa/cli/initial_project/tests/test_stories.yml)
+  steps:
+  - intent: greet  # predicted: welcome: hello
+  - action: utter_greet  # predicted: action_default_fallback
+  - intent: mood_unhappy  # predicted: welcome: not good
+  - action: utter_cheer_up  # predicted: action_default_fallback
+  - action: utter_did_that_help  # predicted: action_listen
+  - intent: deny  # predicted: deny_loan: not really
+  - action: utter_goodbye  # predicted: action_default_fallback
+- story: sad path 3 (./venv/lib/python3.8/site-packages/rasa/cli/initial_project/tests/test_stories.yml)
+  steps:
+  - intent: greet  # predicted: welcome: hi
+  - action: utter_greet  # predicted: action_default_fallback
+  - intent: mood_unhappy  # predicted: confirm_loan: very terrible
+  - action: utter_cheer_up  # predicted: action_default_fallback
+  - action: utter_did_that_help  # predicted: action_listen
+  - intent: deny  # predicted: deny_loan: no
+  - action: utter_goodbye  # predicted: action_default_fallback
+- story: say goodbye (./venv/lib/python3.8/site-packages/rasa/cli/initial_project/tests/test_stories.yml)
+  steps:
+  - intent: goodbye  # predicted: confirm_loan: bye-bye!
+  - action: utter_goodbye
+- story: bot challenge (./venv/lib/python3.8/site-packages/rasa/cli/initial_project/tests/test_stories.yml)
+  steps:
+  - intent: bot_challenge  # predicted: register_for_ecocash: are you a bot?
+  - action: utter_iamabot  # predicted: action_default_fallback
+- story: happy path 1 (./venv/lib64/python3.8/site-packages/rasa/cli/initial_project/tests/test_stories.yml)
+  steps:
+  - intent: greet  # predicted: welcome: hello there!
+  - action: utter_greet  # predicted: action_default_fallback
+  - intent: mood_great  # predicted: welcome: amazing
+  - action: utter_happy  # predicted: action_default_fallback
+- story: happy path 2 (./venv/lib64/python3.8/site-packages/rasa/cli/initial_project/tests/test_stories.yml)
+  steps:
+  - intent: greet  # predicted: welcome: hello there!
+  - action: utter_greet  # predicted: action_default_fallback
+  - intent: mood_great  # predicted: welcome: amazing
+  - action: utter_happy  # predicted: action_default_fallback
+  - intent: goodbye  # predicted: confirm_loan: bye-bye!
+  - action: utter_goodbye

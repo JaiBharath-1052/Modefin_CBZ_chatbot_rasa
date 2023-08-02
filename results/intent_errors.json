@@ -1,0 +1,26 @@
+[
+  {
+    "text": "Hi good morning",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "welcome",
+      "confidence": 0.6462650895118713
+    }
+  },
+  {
+    "text": "when will be the transaction amount reflect in RTGS",
+    "intent": "zipit_reflect_time",
+    "intent_prediction": {
+      "name": "time_take_to_reflect_amount_in_rtgs",
+      "confidence": 0.5459589958190918
+    }
+  },
+  {
+    "text": "How long does it take for RTGS to reflect?",
+    "intent": "zipit_reflect_time",
+    "intent_prediction": {
+      "name": "time_take_to_reflect_amount_in_rtgs",
+      "confidence": 0.5391127467155457
+    }
+  }
+]

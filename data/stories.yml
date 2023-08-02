@@ -1,0 +1,422 @@
+#version: "3.1"
+version: "2.0"
+stories:
+- story: balance_path
+  steps:
+  - intent: balance
+  - action: utter_balance
+- story: billpayment_path
+  steps:
+  - intent: billpayment
+  - action: utter_billpayment
+#- story: cardless_query1_path
+  #steps:
+  #- intent: cardless_query1
+  #- action: utter_cardless_query1
+- story: cardless_path
+  steps:
+  - intent: cardless
+  - action: utter_cardless
+- story: chequebook_path
+  steps:
+  - intent: chequebook
+  - action: utter_chequebook
+- story: covid_19_path
+  steps:
+  - intent: covid_19
+  - action: utter_covid_19
+- story: costumer_care_path
+  steps:
+  - intent: costumer_care
+  - action: utter_costumer_care
+- story: electricity_pymt_path
+  steps:
+  - intent: electricity_pymt
+  - action: utter_electricity_pymt
+- story: feedback_path
+  steps:
+  - intent: feedback
+  - action: utter_feedback
+- story: fullstmt_path
+  steps:
+  - intent: fullstmt
+  - action: utter_fullstmt
+- story: ministmt_path
+  steps:
+  - intent: ministmt
+  - action: utter_ministmt
+- story: proof_of_payment_path
+  steps:
+  - intent: proof_of_payment
+  - action: utter_proof_of_payment
+- story: recharge_path
+  steps:
+  - intent: recharge
+  - action: utter_recharge
+- story: trfr_types_path
+  steps:
+  - intent: trfr_types
+  - action: utter_trfr_types
+- story: welcome_path
+  steps:
+  - intent: welcome
+  - action: utter_welcome
+
+- story: talk_to_human path
+  steps:
+  - intent: talk_to_human
+  - action: utter_talk_to_human
+
+- story: international_transfer
+  steps:
+  - intent: international_transfer
+  - action: utter_international_transfer
+- story: jokes_path
+  steps:
+  - intent: jokes
+  - action: action_jokes
+- story: thanks_path
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- story: register_for_autopay_path
+  steps:
+  - intent: register_for_autopay
+  - action: utter_register_for_autopay
+
+- story: register_mobile_banking_path
+  steps:
+  - intent: register_mobile_banking
+  - action: utter_register_mobile_banking
+
+- story: manual_registration_for_invalid_details_path
+  steps:
+  - intent: manual_registration_for_invalid_details
+  - action: utter_manual_registration_for_invalid_details
+
+- story: login_credentials_error_path
+  steps:
+  - intent: login_credentials_error
+  - action: utter_login_credentials_error
+
+- story: ussd_code_path
+  steps:
+  - intent: ussd_code
+  - action: utter_ussd_code
+
+- story: reset_mobile_banking_mpin_path
+  steps:
+  - intent: reset_mobile_banking_mpin
+  - action: utter_reset_mobile_banking_mpin
+
+- story: where_to_get_reset_form_path
+  steps:
+  - intent: where_to_get_reset_form
+  - action: utter_where_to_get_reset_form
+
+- story: how_to_change_details_on_mobile_banking_path
+  steps:
+  - intent: how_to_change_details_on_mobile_banking
+  - action: utter_how_to_change_details_on_mobile_banking
+
+
+- story: required_docs_for_prepaid_visa_gold_card_path
+  steps:
+  - intent: required_docs_for_prepaid_visa_gold_card
+  - action: utter_required_docs_for_prepaid_visa_gold_card
+
+- story: visa_card_cost_path
+  steps:
+  - intent: visa_card_cost
+  - action: utter_visa_card_cost
+
+- story: min_bal_for_visa_gold_card_account_path
+  steps:
+  - intent: min_bal_for_visa_gold_card_account
+  - action: utter_min_bal_for_visa_gold_card_account
+
+- story: where_to_use_visa_gold_card_path
+  steps:
+  - intent: where_to_use_visa_gold_card
+  - action: utter_where_to_use_visa_gold_card
+
+- story: monthly_charges_for_visa_gold_card_path
+  steps:
+  - intent: monthly_charges_for_visa_gold_card
+  - action: utter_monthly_charges_for_visa_gold_card
+
+- story: card_link_to_paypal_path
+  steps:
+  - intent: card_link_to_paypal
+  - action: utter_card_link_to_paypal
+
+- story: when_visa_gold_card_will_activate_path
+  steps:
+  - intent: when_visa_gold_card_will_activate
+  - action: utter_when_visa_gold_card_will_activate
+- story: receive_visa_gold_card_sms_alerts_path
+  steps:
+  - intent: receive_visa_gold_card_sms_alerts
+  - action: utter_receive_visa_gold_card_sms_alerts
+
+- story: visa_gold_card_transaction_limit_path
+  steps:
+  - intent: visa_gold_card_transaction_limit
+  - action: utter_visa_gold_card_transaction_limit
+- story: how_to_apply_visa_gold_card_path
+  steps:
+  - intent: how_to_apply_visa_gold_card
+  - action: utter_how_to_apply_visa_gold_card
+- story: what_todo_when_lose_visa_gold_card_path
+  steps:
+  - intent: what_todo_when_lose_visa_gold_card
+  - action: utter_what_todo_when_lose_visa_gold_card
+
+- story: rtgs_transfer_charges_path
+  steps:
+  - intent: rtgs_transfer_charges
+  - action: utter_rtgs_transfer_charges
+
+- story: time_take_to_reflect_amount_in_rtgs_path
+  steps:
+  - intent: time_take_to_reflect_amount_in_rtgs
+  - action: utter_time_take_to_reflect_amount_in_rtgs
+
+
+- story: capture_wrong_destination_acc_details_rtgs_transfer_path
+  steps:
+  - intent: capture_wrong_destination_acc_details_rtgs_transfer
+  - action: utter_capture_wrong_destination_acc_details_rtgs_transfer
+
+- story: zipit_charges_path
+  steps:
+  - intent: zipit_charges
+  - action: utter_zipit_charges
+
+- story: zipit_reflect_time_path
+  steps:
+  - intent: zipit_reflect_time
+  - action: utter_zipit_reflect_time
+
+- story: zipit_register_path
+  steps:
+  - intent: zipit_register
+  - action: utter_zipit_register
+
+- story: zipit_limit_per_day_path
+  steps:
+  - intent: zipit_limit_per_day
+  - action: utter_zipit_limit_per_day
+
+- story: zipit_transaction_cost_to_recall_path
+  steps:
+  - intent: zipit_transaction_cost_to_recall
+  - action: utter_zipit_transaction_cost_to_recall
+
+- story: capture_wrong_destination_acc_details_zipit_transfer_path
+  steps:
+  - intent: capture_wrong_destination_acc_details_zipit_transfer
+  - action: utter_capture_wrong_destination_acc_details_zipit_transfer
+
+- story: how_to_login_internet_bank_path
+  steps:
+  - intent: how_to_login_internet_bank
+  - action: utter_how_to_login_internet_bank
+
+- story: pop_corporate_user_path
+  steps:
+  - intent: pop_corporate_user
+  - action: utter_pop_corporate_user
+
+- story: individual_user_bank_statement_path
+  steps:
+  - intent: individual_user_bank_statement
+  - action: utter_individual_user_bank_statement
+
+- story: internet_bank_password_change_path
+  steps:
+  - intent: internet_bank_password_change
+  - action: utter_internet_bank_password_change
+
+- story: register_for_internet_bank_path
+  steps:
+  - intent: register_for_internet_bank
+  - action: utter_register_for_internet_bank
+
+#- story: register_for_obdx_path
+  #steps:
+  #- intent: register_for_obdx
+  #- action: utter_register_for_obdx
+
+- story: change_details_on_internet_bank
+  steps:
+  - intent: change_details_on_internet_bank
+  - action: utter_change_details_on_internet_bank
+
+- story: register_for_ecocash_path
+  steps:
+  - intent: register_for_ecocash
+  - action: utter_register_for_ecocash
+
+- story: register_time_for_ecocash_path
+  steps:
+  - intent: register_time_for_ecocash
+  - action: utter_register_time_for_ecocash
+
+- story: ecocash_transaction_limit_path
+  steps:
+  - intent: ecocash_transaction_limit
+  - action: utter_ecocash_transaction_limit
+
+- story: ecocash_charges_path
+  steps:
+  - intent: ecocash_charges
+  - action: utter_ecocash_charges
+
+- story: cbz_debit_card_charges_path
+  steps:
+  - intent: cbz_debit_card_charges
+  - action: utter_cbz_debit_card_charges
+
+- story: cbz_debit_card_available_path
+  steps:
+  - intent: cbz_debit_card_available
+  - action: utter_cbz_debit_card_available
+
+- story: cbz_debit_card_replacement_path
+  steps:
+  - intent: cbz_debit_card_replacement
+  - action: utter_cbz_debit_card_replacement
+
+- story: block_cbz_atm_card_path
+  steps:
+  - intent: block_cbz_atm_card
+  - action: utter_block_cbz_atm_card
+
+- story: what_is_debit_card_path
+  steps:
+  - intent: what_is_debit_card
+  - action: utter_what_is_debit_card
+
+- story: can_use_cbz_debit_card_on_internet_path
+  steps:
+  - intent: can_use_cbz_debit_card_on_internet
+  - action: utter_can_use_cbz_debit_card_on_internet
+
+- story: can_use_cbz_debit_card_after_loaded_funds_path
+  steps:
+  - intent: can_use_cbz_debit_card_after_loaded_funds
+  - action: utter_can_use_cbz_debit_card_after_loaded_funds
+
+- story: can_withdraw_from_cbz_debit_card_path
+  steps:
+  - intent: can_withdraw_from_cbz_debit_card
+  - action: utter_can_withdraw_from_cbz_debit_card
+
+
+- story: how_to_get_cbz_debit_card_path
+  steps:
+  - intent: how_to_get_cbz_debit_card
+  - action: utter_how_to_get_cbz_debit_card
+
+
+- story: how_to_load_funds_on_cbz_debit_card_path
+  steps:
+  - intent: how_to_load_funds_on_cbz_debit_card
+  - action: utter_how_to_load_funds_on_cbz_debit_card
+
+- story: time_to_receive_cbz_debit_card_path
+  steps:
+  - intent: time_to_receive_cbz_debit_card
+  - action: utter_time_to_receive_cbz_debit_card
+
+- story: forget_debit_card_pin_path
+  steps:
+  - intent: forget_debit_card_pin
+  - action: utter_forget_debit_card_pin
+
+- story: lost_debit_card_path
+  steps:
+  - intent: lost_debit_card
+  - action: utter_lost_debit_card
+
+- story: incorrect_debit-card_pin_path
+  steps:
+  - intent: incorrect_debit-card_pin
+  - action: utter_incorrect_debit-card_pin
+
+- story: cbz_withdraw_fee_path
+  steps:
+  - intent: cbz_withdraw_fee
+  - action: utter_cbz_withdraw_fee
+
+- story: cbz_card_stuck_in_atm_machine_path
+  steps:
+  - intent: cbz_card_stuck_in_atm_machine
+  - action: utter_cbz_card_stuck_in_atm_machine
+
+- story: wrong_name_on_cbz_debit_card_path
+  steps:
+  - intent: wrong_name_on_cbz_debit_card
+  - action: utter_wrong_name_on_cbz_debit_card
+
+- story: damaged_cbz_debit_card_path
+  steps:
+  - intent: damaged_cbz_debit_card
+  - action: utter_damaged_cbz_debit_card
+
+- story: atm_rejected_cbz_debit_card_path
+  steps:
+  - intent: atm_rejected_cbz_debit_card
+  - action: utter_atm_rejected_cbz_debit_card
+
+- story: looking for loan products path
+  steps:
+  - intent: loan_products
+  - action: utter_loan_products
+
+- story: personal loan path1
+  steps:
+  - intent: personal_loan
+  - action: utter_personal_loan
+  - intent: confirm_loan
+  - action: utter_confirm_personal_loan
+
+- story: business loan path1
+  steps:
+  - intent: business_loan
+  - action: utter_business_loan
+  - intent: confirm_loan
+  - action: utter_confirm_business_loan
+
+- story: home loan path1
+  steps:
+  - intent: home_loan
+  - action: utter_home_loan
+  - intent: confirm_loan
+  - action: utter_confirm_home_loan
+
+- story: vacation loan path1
+  steps:
+  - intent: vacation_loan
+  - action: utter_vacation_loan
+  - intent: confirm_loan
+  - action: utter_confirm_vacation_loan
+
+- story: deny_loan path
+  steps:
+  - intent: deny_loan
+  - action: utter_deny_loan
+
+ 
+
+- story: change_password_path
+  steps:
+  - intent: change_password
+  - action: utter_change_password
+
+- story: register_for_autopay_path1
+  steps:
+  - intent: register_for_autopay
+  - action: utter_register_for_autopay
